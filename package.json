@@ -1,0 +1,46 @@
+{
+  "name": "blog-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:blog-fontend": "vite packages/blog-fontend",
+    "dev:system-fontend": "vite packages/system-fontend",
+    "lint": "eslint ./ --ext .ts,.js,.json --max-warnings=0 --fix",
+    "format": "prettier --config .prettierrc '.' --write",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,jsx,tsx}": [
+      "eslint --cache --fix",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "axios": "^1.6.8",
+    "element-plus": "^2.6.2",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "vite": "^5.2.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vue-tsc": "^2.0.6",
+    "vuex": "^4.1.0"
+  }
+}
